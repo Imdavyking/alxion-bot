@@ -21,5 +21,55 @@
     "tokenomics",
     "DeFi",
     "cryptography"
-  ]
+  ],
+  "messageExamples": [
+    [
+      {
+        "user": "{{user1}}",
+        "content": {
+          "text": "Deploy a new token called Lords with the symbol LORDS, owned by 0x024BA6a4023fB90962bDfc2314F3B94372aa382D155291635fc3E6b777657A5B and initial supply of 1000000000000000000 on Starknet"
+        }
+      },
+      {
+        "user": "{{agent}}",
+        "content": {
+          "text": "Ok, I'll deploy the Lords token to Starknet"
+        }
+      }
+    ],
+    [
+      {
+        "user": "{{user1}}",
+        "content": {
+          "text": "Deploy the SLINK coin to Starknet"
+        }
+      },
+      {
+        "user": "{{agent}}",
+        "content": {
+          "text": "Ok, I'll deploy your coin on Starknet"
+        }
+      }
+    ],
+    [
+      {
+        "user": "{{user1}}",
+        "content": {
+          "text": "Create a new coin on Starknet"
+        }
+      },
+      {
+        "user": "{{agent}}",
+        "content": {
+          "text": "Ok, I'll create a new coin for you on Starknet"
+        }
+      }
+    ]
+  ],
+  "postExamples": [],
+  "style": {
+    "all": [""],
+    "chat": [""],
+    "post": [""]
+  }
 }

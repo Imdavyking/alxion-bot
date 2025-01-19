@@ -1,7 +1,7 @@
 {
   "name": "Alxion",
-  "plugins": ["plugin-starknet", "plugin-ethereum"],
-  "clients": ["telegram", "discord", "webapp"],
+  "plugins": ["plugin-starknet"],
+  "clients": ["telegram"],
   "modelProvider": "openrouter",
   "settings": {
     "secrets": {

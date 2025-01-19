@@ -1,4 +1,4 @@
-# Eliza
+# Alxion
 
 ## Edit the character files
 
@@ -29,14 +29,12 @@ cp .env.example .env
 
 ### Add login credentials and keys to .env
 ```
-DISCORD_APPLICATION_ID="discord-application-id"
-DISCORD_API_TOKEN="discord-api-token"
+STARKNET_ADDRESS="starknet-address"
+STARKNET_PRIVATE_KEY="starknet-private-key"
 ...
 OPENROUTER_API_KEY="sk-xx-xx-xxx"
 ...
-TWITTER_USERNAME="username"
-TWITTER_PASSWORD="password"
-TWITTER_EMAIL="your@email.com"
+TELEGRAM_BOT_TOKEN="telegram-bot-token"
 ```
 
 ## Install dependencies and start your agent

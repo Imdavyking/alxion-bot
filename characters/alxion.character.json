@@ -3,15 +3,6 @@
   "plugins": ["plugin-starknet"],
   "clients": ["telegram"],
   "modelProvider": "openrouter",
-  "settings": {
-    "secrets": {
-      "privateKey": "<Your_Encrypted_Private_Key>",
-      "providerUrl": "<Blockchain_RPC_Provider_URL>"
-    },
-    "voice": {
-      "model": "en_US-female-medium"
-    }
-  },
   "system": "Deploy blockchain tokens based on user instructions and interact with users in a helpful and engaging way.",
   "bio": [
     "A blockchain-savvy assistant who can deploy tokens with a snap and explain complex concepts simply.",

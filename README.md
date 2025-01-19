@@ -1,88 +1,138 @@
-# Alxion
+# **Alxion - StarkNet Token Deployment Bot**
 
-## Edit the character files
+**Alxion** is an intelligent bot built to interact with users and deploy tokens on the **StarkNet** blockchain. It’s designed to be easy to use, highly customizable, and integrates with messaging platforms like Telegram and Discord.
 
-Open `src/character.ts` to modify the default character. Uncomment and edit.
+---
 
-### Custom characters
+## **Features**
 
-To load custom characters instead:
-- Use `pnpm start --characters="path/to/your/character.json"`
-- Multiple character files can be loaded simultaneously
+- **Token Deployment**: Easily deploy custom tokens on the StarkNet blockchain based on user instructions.
+- **Interactive Chat**: Interact with users in a friendly, engaging way across multiple platforms.
+- **Customizable Character**: Tailor Alxion’s personality and functionality to fit your needs.
+- **Support for Multiple Clients**: Works on Telegram, Discord, and more.
 
-### Add clients
+---
+
+## **Setup and Installation**
+
+### **1. Clone the Repository**
+
+Start by cloning the repository:
+
+```bash
+git clone https://github.com/Imdavyking/alxion-bot
+cd alxion-bot
 ```
-# in character.ts
-clients: [Clients.TWITTER, Clients.DISCORD],
 
-# in character.json
-clients: ["twitter", "discord"]
+### **2. Install Dependencies**
+
+Alxion uses **pnpm** as the package manager. Install the required dependencies by running:
+
+```bash
+pnpm install
 ```
 
-## Duplicate the .env.example template
+### **3. Configure Your Environment**
+
+Create a `.env` file by duplicating the example template:
 
 ```bash
 cp .env.example .env
 ```
 
-\* Fill out the .env file with your own values.
+Edit the `.env` file and fill out the following required values:
 
-### Add login credentials and keys to .env
-```
-STARKNET_ADDRESS="starknet-address"
-STARKNET_PRIVATE_KEY="starknet-private-key"
-...
-OPENROUTER_API_KEY="sk-xx-xx-xxx"
-...
-TELEGRAM_BOT_TOKEN="telegram-bot-token"
+```env
+STARKNET_ADDRESS="your-starknet-address"
+STARKNET_PRIVATE_KEY="your-starknet-private-key"
+OPENROUTER_API_KEY="your-openrouter-api-key"
+TELEGRAM_BOT_TOKEN="your-telegram-bot-token"
 ```
 
-## Install dependencies and start your agent
+Make sure you replace the placeholders with your actual values.
+
+---
+
+## **Character Configuration**
+
+### **1. Modify Default Character**
+
+You can modify Alxion’s default character by editing the `src/character.ts` file. Uncomment and edit the character configuration to change Alxion's appearance, bio, lore, and more.
+
+### **2. Use Custom Characters**
+
+To load a custom character, specify the path to your character JSON file when starting the bot:
 
 ```bash
-pnpm i && pnpm start --characters="characters/alxion.character.json"
-```
-Note: this requires node to be at least version 22 when you install packages and run the agent.
-
-## Run with Docker
-
-### Build and run Docker Compose (For x86_64 architecture)
-
-#### Edit the docker-compose.yaml file with your environment variables
-
-```yaml
-services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
+pnpm start --characters="path/to/your/custom.character.json"
 ```
 
-#### Run the image
+You can load multiple characters at once by passing an array of paths.
+
+---
+
+## **Add Clients**
+
+To define which platforms Alxion will interact with, modify the `clients` array in either `character.ts` or `character.json`:
+
+- **In character.ts:**
+
+  ```ts
+  clients: [Clients.TELEGRAM];
+  ```
+
+- **In character.json:**
+  ```json
+  clients: ["telegram"]
+  ```
+
+---
+
+## **Start the Bot**
+
+After configuring the environment and character, you can start the bot by running:
 
 ```bash
-docker compose up
+pnpm start --characters="characters/alxion.character.json"
 ```
 
-### Build the image with Mac M-Series or aarch64
+---
 
-Make sure docker is running.
+## **Running Alxion with Docker**
 
-```bash
-# The --load flag ensures the built image is available locally
-docker buildx build --platform linux/amd64 -t eliza-starter:v1 --load .
-```
+### **1. Build and Run Docker Compose**
 
-#### Edit the docker-compose-image.yaml file with your environment variables
+For **x86_64 architecture**, follow these steps:
 
-```yaml
-services:
-    eliza:
-        environment:
-            - OPENROUTER_API_KEY=blahdeeblahblahblah
-```
+1. Edit the **docker-compose.yaml** file with your environment variables:
 
-#### Run the image
+   ```yaml
+   services:
+     eliza:
+       environment:
+         - OPENROUTER_API_KEY=your-openrouter-api-key
+   ```
 
-```bash
-docker compose -f docker-compose-image.yaml up
-```
+2. Run the Docker Compose setup:
+
+   ```bash
+   docker compose up
+   ```
+   
+## **Contributing**
+
+We welcome contributions! Please fork the repository, create a new branch, and submit a pull request with your changes.
+
+---
+
+## **License**
+
+This project is licensed under the MIT License.
+
+---
+
+## **Support**
+
+If you need any help, feel free to reach out through our Telegram or Discord channels.
+
+---

@@ -78,12 +78,12 @@ To define which platforms Alxion will interact with, modify the `clients` array 
 - **In character.ts:**
 
   ```ts
-  clients: [Clients.TELEGRAM];
+  clients: [Clients.TELEGRAM,Clients.TWITTER];
   ```
 
 - **In character.json:**
   ```json
-  clients: ["telegram"]
+  clients: ["telegram","twitter"]
   ```
 
 ---
